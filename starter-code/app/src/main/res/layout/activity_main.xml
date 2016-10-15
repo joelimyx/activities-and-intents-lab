@@ -9,7 +9,45 @@
         android:layout_height="match_parent">
         <LinearLayout android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="15dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/noun1Edit"
+                android:hint="Noun"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/noun2Edit"
+                android:hint="Noun"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/adjective1Edit"
+                android:hint="Adjective"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/adjective2Edit"
+                android:hint="Adjective"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/animalsEdit"
+                android:hint="Animals(Plural)"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gameEdit"
+                android:hint="Game"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resultButton"
+                android:text="Show Result"/>
 
         </LinearLayout>
     </ScrollView>
