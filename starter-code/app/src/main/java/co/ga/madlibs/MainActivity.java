@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                boolean empty = true;
+                int numOfEmpty = 0;
 
                 String noun1 = mNoun1Edit.getText().toString();
                 String noun2 = mNoun2Edit.getText().toString();
@@ -42,9 +42,30 @@ public class MainActivity extends AppCompatActivity {
                 String animal = mAnimalsEdit.getText().toString();
                 String game = mGameEdit.getText().toString();
 
-                if (noun1.isEmpty())
+                if (noun1.isEmpty()) {
                     mNoun1Edit.setError("Pleas input a noun.");
-                
+                    numOfEmpty++;
+                }
+                if (noun2.isEmpty()) {
+                    mNoun2Edit.setError("Pleas input a noun.");
+                    numOfEmpty++;
+                }
+                if (adjective1.isEmpty()) {
+                    mAdjective1Edit.setError("Pleas input an adjective.");
+                    numOfEmpty++;
+                }
+                if (adjective2.isEmpty()) {
+                    mAdjective2Edit.setError("Pleas input an adjective.");
+                    numOfEmpty++;
+                }
+                if (animal.isEmpty()) {
+                    mAnimalsEdit.setError("Pleas input an animal.");
+                    numOfEmpty++;
+                }
+                if (game.isEmpty()) {
+                    mGameEdit.setError("Pleas input a game.");
+                    numOfEmpty++;
+                }
 
                 myIntent.putExtra("Noun 1", noun1);
                 myIntent.putExtra("Noun 2", noun2);
@@ -53,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 myIntent.putExtra("Animal", animal);
                 myIntent.putExtra("Game", game);
 
-                if (!empty)
+                if (numOfEmpty == 0)
                     startActivity(myIntent);
             }
         });
